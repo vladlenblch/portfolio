@@ -1,7 +1,6 @@
 :root {
   color-scheme: dark;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --bg: rgb(33, 33, 33);
   --panel: transparent;
   --text: #e2e8f0;
   --muted: #9ca3af;
@@ -9,7 +8,6 @@
   --border: rgba(226, 232, 240, 0.14);
   --accent: rgb(230, 250, 90);
   --accent-2: rgb(230, 240, 180);
-  --shadow: none;
 }
 
 * {
@@ -219,13 +217,6 @@ a:hover {
   padding-bottom: 10px;
 }
 
-h1 {
-  font-size: clamp(2.4rem, 3vw, 3rem);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin-bottom: 12px;
-}
-
 h2 {
   font-size: 2rem;
   margin-bottom: 4px;
@@ -247,12 +238,6 @@ p {
   color: var(--muted);
 }
 
-.lead {
-  font-size: 1.125rem;
-  color: var(--text);
-  margin-bottom: 20px;
-}
-
 .education {
   display: grid;
   gap: 22px;
@@ -267,11 +252,6 @@ p {
 .education__meta {
   color: var(--muted);
   font-weight: 700;
-}
-
-.education__program {
-  color: var(--muted-2);
-  margin: 0;
 }
 
 .education__list {
@@ -353,10 +333,6 @@ p {
 
 .icon-button:hover .icon-button__svg {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(103%) contrast(103%);
-}
-
-.hero__actions .icon-button {
-  justify-self: center;
 }
 
 .suppress-hover .icon-button:hover {
@@ -528,10 +504,6 @@ p {
   align-self: start;
 }
 
-.inline-link {
-  font-weight: 700;
-}
-
 @media (hover: none) and (pointer: coarse) {
   .button--primary:hover,
   .button--primary:active {
@@ -623,13 +595,4 @@ p {
     font-size: 0.85rem;
   }
 
-  .radio-container {
-    flex-direction: row;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .radio-container .glider-container {
-    display: none;
-  }
 }
