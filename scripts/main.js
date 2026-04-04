@@ -170,6 +170,28 @@ sections.forEach((section) => {
 });
 
 const emailButtons = document.querySelectorAll('[data-email]');
+
+async function copyText(text) {
+  if (navigator?.clipboard?.writeText) {
+    await navigator.clipboard.writeText(text);
+    return true;
+  }
+
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.setAttribute('readonly', '');
+  textarea.style.position = 'absolute';
+  textarea.style.left = '-9999px';
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  try {
+    return document.execCommand('copy');
+  } finally {
+    document.body.removeChild(textarea);
+  }
+}
+
 emailButtons.forEach((emailButton) => {
   const email = emailButton.getAttribute('data-email');
   
@@ -180,9 +202,11 @@ emailButtons.forEach((emailButton) => {
   emailButton.addEventListener('click', async (event) => {
     event.preventDefault();
     if (!email) return;
+
     try {
-      if (navigator?.clipboard?.writeText) {
-        await navigator.clipboard.writeText(email);
+      const copied = await copyText(email);
+
+      if (copied) {
         emailButton.textContent = translations[currentLang]['email.copied'];
         setTimeout(() => {
           emailButton.textContent = getOriginalText();
