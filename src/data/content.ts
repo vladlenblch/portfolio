@@ -1,9 +1,7 @@
-/** Portfolio copy sourced from workspace me.txt, stack.txt, projects.txt */
-
 const resumePath = `${import.meta.env.BASE_URL}resume.pdf`
 
 export const person = {
-  name: 'Влад',
+  name: 'Владислав Ларионов',
   tagline:
     'Учусь на факультете ПИиКТ в ИТМО, обучаю модели машинного обучения.',
   github: 'https://github.com/vladlenblch',
@@ -33,7 +31,6 @@ export const education = [
   },
 ] as const
 
-/** Soft skills — блок «Обо мне» (не из me.txt; общие формулировки) */
 export const softSkills = [
   'Умение работать в команде',
   'Самообучаемость',
@@ -42,7 +39,6 @@ export const softSkills = [
   'Ответственность за результат',
 ] as const
 
-/** Разговорные языки — при необходимости поправьте уровни под резюме */
 export const spokenLanguages = [
   'Английский — C1',
 ] as const
@@ -70,7 +66,6 @@ export const stackGroups = [
   },
 ] as const
 
-/** Технологии этого сайта (футер) */
 export const siteStackFooterText = ['Vite', 'React', 'TypeScript', 'CSS'].join(' · ')
 
 export type ProjectBullet =
@@ -133,5 +128,4 @@ export const projects = [
   tags: readonly string[]
 }>
 
-/** Бегущая строка — те же названия на английском, что в разделе «Стек» */
 export const marqueeItems = stackGroups.flatMap((g) => [...g.items])
