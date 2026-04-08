@@ -19,7 +19,8 @@ npm run dev
 ## О проекте
 
 В репозитории хранится исходный код веб-сайта. <br>
-Актуальная версия: [https://vladlenblch.ru/](https://vladlenblch.ru/)
+Актуальная версия: [https://vladlenblch.ru/](https://vladlenblch.ru/) <br>
+(Введите `cat` в любом месте веб-сайта ^_^)
 
 ## Технологический стек и требования
 
