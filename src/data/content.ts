@@ -83,13 +83,13 @@ export const projects = [
       'Сравнил с релизациями sklearn',
     ],
     url: 'https://github.com/vladlenblch/linear_regressions_from_scratch',
-    tags: ['Python', 'ML', 'sklearn', 'optimization'],
+    tags: ['Python', 'ML', 'sklearn', 'algorithms'],
   },
   {
     title: 'Дерево решений на C++',
     bullets: [
       'Реализовал дерево бинарной классификации с нуля на C++',
-      'Подготовил пайплайн, включающий в себя покрытие тестами, гугл-бенчмарки и проверку на утечки памяти',
+      'Подготовил пайплайн, включающий в себя покрытие тестами и гугл-бенчмарки',
       {
         text: 'Метрики на тестовой выборке:',
         sub: [
@@ -103,13 +103,13 @@ export const projects = [
       },
     ],
     url: 'https://github.com/vladlenblch/decision_tree_classifier_cpp',
-    tags: ['C++', 'ML', 'CI', 'algorithms'],
+    tags: ['C++', 'ML', 'CI', 'optimization'],
   },
   {
     title: 'Приложение с отслеживанием рук',
     bullets: [
       {
-        text: 'Включает в себя следующие режимы:',
+        text: 'Реализовал интерактивное приложение, включаещееся в себя следующие режимы:',
         sub: [
           'Подсчет количества пальцев',
           'Галерея с возможностью листать фото свайпом руками',
