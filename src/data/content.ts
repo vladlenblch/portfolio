@@ -80,7 +80,7 @@ export const projects = [
       'Реализовал с нуля регрессию через минимизацию MAE (subgradient descent)',
       'Реализовал с нуля SGD',
       'Сделал визуализацию сходимости SGD',
-      'Сравнил с релизациями sklearn',
+      'Сравнил с реализациями sklearn',
     ],
     url: 'https://github.com/vladlenblch/linear_regressions_from_scratch',
     tags: ['Python', 'ML', 'sklearn', 'algorithms'],
@@ -93,12 +93,12 @@ export const projects = [
       {
         text: 'Метрики на тестовой выборке:',
         sub: [
-          'gini — Accuracy: 97.091',
-          'gini — Precision: 95.238',
-          'gini — Recall: 98.361', 
-          'entropy — Accuracy: 98.546',
-          'entropy — Precision: 99.167',
-          'entropy — Recall: 97.541',
+          'gini: Accuracy = 97.091',
+          'gini: Precision = 95.238',
+          'gini: Recall = 98.361', 
+          'entropy: Accuracy = 98.546',
+          'entropy: Precision = 99.167',
+          'entropy: Recall = 97.541',
         ],
       },
     ],
@@ -109,7 +109,7 @@ export const projects = [
     title: 'Приложение с отслеживанием рук',
     bullets: [
       {
-        text: 'Реализовал интерактивное приложение, включаещееся в себя следующие режимы:',
+        text: 'Реализовал интерактивное приложение, включающее следующие режимы:',
         sub: [
           'Подсчет количества пальцев',
           'Галерея с возможностью листать фото свайпом руками',
