@@ -749,3 +749,27 @@ button.contact-tile {
   opacity: 0.92;
   text-wrap: balance;
 }
+
+.cat-easter {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.cat-easter__frame {
+  width: min(88vw, 21rem);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  background: var(--surface);
+  padding: 0.45rem;
+}
+
+.cat-easter__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: var(--border);
+}
