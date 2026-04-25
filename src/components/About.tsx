@@ -12,7 +12,6 @@ export function About() {
         <div className="about-columns__left">
           {education.map((row) => (
             <article key={row.place} className="about-edu">
-              <div className="timeline__marker" aria-hidden />
               <div className="timeline__body">
                 <p className="timeline__period">{row.period}</p>
                 <h3 className="timeline__place">{row.place}</h3>

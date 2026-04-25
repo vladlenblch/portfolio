@@ -46,7 +46,7 @@ export function Contact() {
           <span className="contact-tile__value">vladlenblch</span>
         </a>
         <a className="contact-tile" href={person.resumePath} download="resume.pdf">
-          <span className="contact-tile__label">Резюме</span>
+          <span className="contact-tile__label">Resume</span>
           <span className="contact-tile__value">Скачать PDF</span>
         </a>
       </div>

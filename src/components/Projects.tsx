@@ -48,7 +48,7 @@ export function Projects() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Репозиторий →
+                Репозиторий
               </a>
             </article>
           </li>

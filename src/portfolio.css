@@ -449,10 +449,18 @@ body::before {
 }
 
 .about-edu {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
-  align-items: start;
+  display: block;
+}
+
+.timeline__body {
+  border: var(--border);
+  background: var(--surface);
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.about-edu .timeline__body {
+  padding-bottom: calc(1rem + 2.65px);
 }
 
 .about-side__heading {
@@ -472,26 +480,6 @@ body::before {
 
 .about-side__list li:last-child {
   margin-bottom: 0;
-}
-
-.timeline__marker {
-  width: 18px;
-  height: 18px;
-  margin-top: 0.35rem;
-  background: var(--accent);
-  border: var(--border);
-  box-shadow: 2px 2px 0 var(--ink);
-}
-
-.timeline__body {
-  border: var(--border);
-  background: var(--surface);
-  padding: 1rem 1.1rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.about-edu .timeline__body {
-  padding-bottom: calc(1rem + 2.65px);
 }
 
 .timeline__period {

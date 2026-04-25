@@ -50,11 +50,11 @@ export const stackGroups = [
   },
   {
     title: 'Работа с данными',
-    items: ['pandas', 'PostgreSQL', 'SQLite', 'Microsoft Excel', 'NumPy'],
+    items: ['Pandas', 'PostgreSQL', 'SQLite', 'Microsoft Excel', 'NumPy'],
   },
   {
     title: 'Визуализация',
-    items: ['Matplotlib', 'seaborn', 'Plotly', 'Streamlit'],
+    items: ['Matplotlib', 'Seaborn', 'Plotly', 'Streamlit'],
   },
   {
     title: 'Языки программирования',
@@ -62,7 +62,7 @@ export const stackGroups = [
   },
   {
     title: 'Инструменты',
-    items: ['Git', 'Docker', 'Linux/Bash', 'LaTeX', 'Markdown'],
+    items: ['Git', 'Docker', 'Bash', 'LaTeX', 'Markdown'],
   },
 ] as const
 
@@ -74,22 +74,22 @@ export type ProjectBullet =
 
 export const projects = [
   {
-    title: 'Линейная регрессия с нуля',
+    title: 'Линейные регрессии с нуля',
     bullets: [
       'Реализовал с нуля регрессию через минимизацию MSE (аналитическое решение)',
       'Реализовал с нуля регрессию через минимизацию MAE (subgradient descent)',
-      'Реализовал с нуля SGD',
+      'Реализовал с нуля стохастический градиентный спуск для минимизации MSE',
       'Сделал визуализацию сходимости SGD',
-      'Сравнил с реализациями sklearn',
+      'Сравнил с реализациями scikit-learn',
     ],
     url: 'https://github.com/vladlenblch/linear_regressions_from_scratch',
-    tags: ['Python', 'ML', 'sklearn', 'algorithms'],
+    tags: ['Python', 'NumPy', 'scikit-learn', 'Plotly', 'Streamlit', 'ML', 'Algorithms'],
   },
   {
     title: 'Дерево решений на C++',
     bullets: [
       'Реализовал дерево бинарной классификации с нуля на C++',
-      'Подготовил пайплайн, включающий в себя покрытие тестами и гугл-бенчмарки',
+      'Подготовил пайплайн, включающий в себя покрытие тестами и бенчмарки на Google Benchmark',
       {
         text: 'Метрики на тестовой выборке:',
         sub: [
@@ -103,7 +103,7 @@ export const projects = [
       },
     ],
     url: 'https://github.com/vladlenblch/decision_tree_classifier_cpp',
-    tags: ['C++', 'ML', 'CI', 'optimization'],
+    tags: ['C++17', 'GoogleTest', 'GitHub Actions', 'ML', 'CI', 'Optimization'],
   },
   {
     title: 'Приложение с отслеживанием рук',
@@ -111,15 +111,15 @@ export const projects = [
       {
         text: 'Реализовал интерактивное приложение, включающее следующие режимы:',
         sub: [
-          'Подсчет количества пальцев',
+          'Подсчёт количества пальцев',
           'Галерея с возможностью листать фото свайпом руками',
-          'Рисование в воздухе с возможностью выбора цвета, жирности ручки и режима ластика',
-          'Оставшиеся режимы, основанные на различных жестах рук',
+          'Рисование в воздухе с возможностью выбора цвета, толщины линии и режима ластика',
+          'Дополнительные режимы взаимодействия на основе распознавания жестов рук',
         ],
       },
     ],
     url: 'https://github.com/vladlenblch/hands_detection',
-    tags: ['Python', 'CV', 'mediapipe', 'interaction'],
+    tags: ['Python', 'OpenCV', 'MediaPipe', 'CV', 'Interaction'],
   },
 ] as const satisfies ReadonlyArray<{
   title: string

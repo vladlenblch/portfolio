@@ -1,0 +1,228 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\input{glyphtounicode}
+
+%----------------------------------------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+%----------------------------------------
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%----------------------------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabularx}{0.97\textwidth}[t]{@{}>{\raggedright\arraybackslash}Xr@{}}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabularx}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingSeveral}[5]{
+  \vspace{-2pt}\item
+    \begin{tabularx}{0.97\textwidth}[t]{@{}>{\raggedright\arraybackslash}Xr@{}}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small #5} & \\
+    \end{tabularx}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\contactlink}[2]{\href{#1}{\uline{#2}}}
+
+%----------------------------------------
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge \scshape Владислав Ларионов} \\ \vspace{1pt}
+  \small +7(911)873-66-15 $|$
+  \contactlink{mailto:vlad6larionov@gmail.com}{vlad6larionov@gmail.com} $|$ 
+  \contactlink{https://github.com/vladlenblch}{github.com/vladlenblch} $|$
+  \contactlink{https://vladlenblch.ru}{vladlenblch.ru}
+\end{center}
+
+%----------------------------------------
+\section{Образование}
+  \resumeSubHeadingListStart
+    \resumeSubheadingSeveral
+      {Университет ИТМО}{Санкт-Петербург, Россия}
+      {Факультет Программной Инженерии и Компьютерной Техники}{Сентябрь 2024 -- Июнь 2028}
+      {Программа <<Системное и Прикладное Программное Обеспечение>>}
+    \resumeSubheading
+      {ЗФТШ при МФТИ}{Москва, удалённо}
+      {Заочная Физико-Техническая Школа при МФТИ}{Сентябрь 2022 -- Июнь 2023}
+      \resumeItemListStart
+        \resumeItem{Отделение математики, повышенный уровень}
+        \resumeItem{Отделение информатики, повышенный уровень}
+      \resumeItemListEnd
+    \resumeSubheading
+      {ГАОУ ДО АО <<Центр Созвездие>>}{Архангельск, Россия}
+      {Программа <<Избранные вопросы математики>>}{Сентябрь 2021 -- Июнь 2022}
+  \resumeSubHeadingListEnd
+
+%----------------------------------------
+\section{Опыт Работы}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Аналитик данных}{Декабрь 2024 -- Апрель 2025}
+      {Выездной Бар \contactlink{https://side.moscow}{side.moscow}}{Санкт-Петербург, удалённо}
+      \resumeItemListStart
+        \resumeItem{Анализировал данные о продажах и закупках}
+        \resumeItem{Рассчитывал себестоимости и оптимизировал цены}
+        \resumeItem{Оценивал эффективность мероприятий и рекламных кампаний}
+        \resumeItem{Визуализировал данные}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Стажер, Разработчик}{Май 2024 -- Июль 2024}
+      {Международный Фестиваль Новой Культуры <<Белый Июнь>>}{Архангельск, Россия}
+      \resumeItemListStart
+        \resumeItem{Обеспечивал поддержку работоспособности высоконагруженного сайта}
+        \resumeItem{Участвовал в разработке и тестировании Телеграм-бота с VR-технологиями}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Организатор направления <<Игра>>}{Май 2024 -- Июль 2024}
+      {Международный Фестиваль Новой Культуры <<Белый Июнь>>}{Архангельск, Россия}
+      \resumeItemListStart
+        \resumeItem{Руководил командой волонтеров}
+        \resumeItem{Координировал участников фестиваля и взаимодействие с посетителями (120 000 за время проведения)}
+        \resumeItem{Занимался технической поддержкой до, во время и после фестиваля}
+        \resumeItem{Следил за обстановкой в зоне проведения мероприятий с целью обеспечения комфорта участников и посетителей}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%----------------------------------------
+\section{Проекты}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Линейные регрессии с нуля} $|$ \emph{Python, NumPy, scikit-learn, Plotly, Streamlit}}{}
+      \resumeItemListStart
+        \resumeItem{Реализовал с нуля регрессию через минимизацию MSE (аналитическое решение)}
+        \resumeItem{Реализовал с нуля регрессию через минимизацию MAE (subgradient descent)}
+        \resumeItem{Реализовал с нуля стохастический градиентный спуск для минимизации MSE}
+        \resumeItem{Сделал визуализацию сходимости SGD}
+        \resumeItem{Сравнил с реализациями scikit-learn}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Дерево решений на C++} $|$ \emph{C++17, CMake, GoogleTest, Google Benchmark, GitHub Actions}}{}
+      \resumeItemListStart
+        \resumeItem{Реализовал дерево бинарной классификации с нуля на C++}
+        \resumeItem{Подготовил пайплайн, включающий в себя покрытие тестами и бенчмарки на Google Benchmark}
+        \resumeItem{Метрики на тестовой выборке с gini: Accuracy = 97.091, Precision = 95.238, Recall = 98.361}
+        \resumeItem{Метрики на тестовой выборке с entropy: Accuracy = 98.546, Precision = 99.167, Recall = 97.541}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Приложение с отслеживанием рук} $|$ \emph{Python, OpenCV, MediaPipe}}{}
+      \resumeItemListStart
+        \resumeItem{Реализовал интерактивное приложение, включающее следующие режимы:}
+        \resumeItem{Подсчёт количества пальцев}
+        \resumeItem{Галерея с возможностью листать фото свайпом руками}
+        \resumeItem{Рисование в воздухе с возможностью выбора цвета, толщины линии и режима ластика}
+        \resumeItem{Дополнительные режимы взаимодействия на основе распознавания жестов рук}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%----------------------------------------
+\section{Технические Навыки}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Языки программирования}{: Python, С++, Java, JavaScript} \\
+      \textbf{Машинное обучение}{: scikit-learn, CatBoost} \\
+      \textbf{Работа с данными}{: Pandas, Excel} \\
+      \textbf{Математические вычисления}{: NumPy, SciPy} \\
+      \textbf{Визуализация данных}{: Matplotlib, Seaborn, Plotly, Streamlit} \\
+      \textbf{Базы Данных}{: PostgreSQL, SQLite} \\
+      \textbf{Инструменты}{: Git, Docker, Bash} \\
+      \textbf{Форматирование}{: LaTeX, Markdown}
+    }}
+  \end{itemize}
+
+%----------------------------------------
+\section{Дополнительная Информация}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Языки}{}
+      {Русский (родной), Английский (C1 -- Advanced)}{}
+    \resumeSubheading
+      {Навыки и личные качества}{}
+      {Ответственность, быстрая обучаемость, коммуникабельность, работа в команде, лидерские качества, стрессоустойчивость, умение давать конструктивную обратную связь и воспринимать критику, целеустремлённость}{}
+    \vspace{-2pt}\item
+      \textbf{Достижения}\vspace{-4pt}
+      \resumeItemListStart
+        \resumeItem{Многократный победитель и призёр городских олимпиад по программированию, математике и английскому языку}
+        \resumeItem{Многократный победитель и призёр городских и областных соревнований по плаванию}
+        \resumeItem{Неоднократный победитель и призёр международных соревнований по плаванию}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%----------------------------------------
+\end{document}
