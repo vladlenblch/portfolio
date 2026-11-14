@@ -1,0 +1,1061 @@
+:root[data-style='apple'] {
+  --paper: #fff;
+  --ink: #1d1d1f;
+  --accent: #0071e3;
+  --html-overscroll: #fff;
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+:root[data-style='apple'] body {
+  background: #fff;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root[data-style='apple'] body::before {
+  display: none;
+}
+
+:root[data-style='apple'] .skip-link {
+  color: #fff;
+  background: #0071e3;
+  border: 0;
+  box-shadow: none;
+  border-radius: 8px;
+}
+
+:root[data-style='apple'] .site-header {
+  min-height: 44px;
+  padding: 0 max(22px, calc((100% - 980px) / 2));
+  gap: 48px;
+  border: 0;
+  box-shadow: none;
+  background: rgba(250,250,252,.92);
+  backdrop-filter: saturate(180%) blur(20px);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -.01em;
+}
+
+:root[data-style='apple'] .site-nav {
+  flex: 1;
+}
+
+:root[data-style='apple'] .site-nav__list {
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: nowrap;
+}
+
+:root[data-style='apple'] .site-nav__link {
+  padding: 14px 0;
+  border: 0;
+  font-weight: 400;
+  opacity: .8;
+  background: transparent;
+  box-shadow: none;
+}
+
+:root[data-style='apple'] .site-nav__link:hover {
+  color: #1d1d1f;
+  background: transparent;
+  opacity: 1;
+}
+
+:root[data-style='apple'] .style-picker__toggle {
+  min-height: 32px;
+  gap: 8px;
+  padding: 8px 10px;
+  margin-right: -10px;
+  border: 0;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+  transition: background .16s;
+  white-space: nowrap;
+}
+
+:root[data-style='apple'] .style-picker__toggle:hover,
+:root[data-style='apple'] .style-picker__toggle[aria-expanded='true'] {
+  background: #e8e8ed;
+  box-shadow: none;
+  transform: none;
+}
+
+:root[data-style='apple'] .style-picker__toggle:active {
+  background: #dcdce2;
+  transform: none;
+}
+
+:root[data-style='apple'] .style-picker__current {
+  display: inline;
+}
+
+:root[data-style='apple'] .style-picker__chevron {
+  width: 12px;
+  height: 12px;
+}
+
+:root[data-style='apple'] .style-picker__list {
+  inset: calc(100% + 6px) -10px auto auto;
+  width: 210px;
+  padding: 8px;
+  border: 1px solid #e8e8ed;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 12px 35px #0000001a;
+}
+
+:root[data-style='apple'] .style-picker__option {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 40px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #1d1d1f;
+  background: #fff;
+}
+
+:root[data-style='apple'] .style-picker__option[aria-pressed='true'] {
+  background: #eaf3ff;
+  color: #0066cc;
+}
+
+:root[data-style='apple'] .style-picker__option:hover {
+  background: #f5f5f7;
+  color: #0066cc;
+}
+
+:root[data-style='apple'] .nav-toggle {
+  margin-left: auto;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  gap: 5px;
+}
+
+:root[data-style='apple'] .nav-toggle__bar {
+  width: 18px;
+  height: 1px;
+  transition: transform .16s;
+}
+
+:root[data-style='apple'] .nav-toggle[aria-expanded='true'] .nav-toggle__bar:nth-child(1) {
+  transform: translateY(3px) rotate(45deg);
+}
+
+:root[data-style='apple'] .nav-toggle[aria-expanded='true'] .nav-toggle__bar:nth-child(2) {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+@media (max-width: 833px) {
+  :root[data-style='apple'] body.nav-open {
+    overflow: hidden;
+  }
+  :root[data-style='apple'] .site-header {
+    min-height: 48px;
+    padding: 0 14px 0 22px;
+  }
+  :root[data-style='apple'] .nav-toggle {
+    display: flex;
+  }
+  :root[data-style='apple'] .site-nav {
+    position: fixed;
+    inset: 48px 0 auto;
+    height: calc(100dvh - 48px);
+    overflow-y: auto;
+    padding: 12px 32px 32px;
+    border: 0;
+    background: #fafafc;
+    transform: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .16s, visibility .16s;
+  }
+  :root[data-style='apple'] body.nav-open .site-nav {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  :root[data-style='apple'] .site-nav__list {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+  }
+  :root[data-style='apple'] .site-nav__link {
+    display: block;
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: 600;
+    padding: 7px 0;
+    opacity: 1;
+  }
+  :root[data-style='apple'] .style-picker {
+    margin-top: 24px;
+    border-top: 1px solid #d2d2d7;
+    padding-top: 12px;
+  }
+  :root[data-style='apple'] .style-picker__toggle {
+    min-height: 44px;
+    padding: 10px 0;
+    font-size: 17px;
+    line-height: 24px;
+    gap: 10px;
+    margin: 0;
+  }
+  :root[data-style='apple'] .style-picker__list {
+    position: static;
+    width: 100%;
+    max-width: 340px;
+    margin-top: 8px;
+    padding: 4px;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+  :root[data-style='apple'] .style-picker__option {
+    min-height: 44px;
+    background: transparent;
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+.apple-portfolio {
+  --apt-ink: #1d1d1f;
+  --apt-muted: #6e6e73;
+  --apt-pale: #f5f5f7;
+  --apt-blue: #0071e3;
+  --apt-link: #0066cc;
+  --apt-line: #d2d2d7;
+  background: #fff;
+  color: var(--apt-ink);
+  font-family: -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 17px;
+  line-height: 1.47059;
+  letter-spacing: -.022em;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: light;
+  container-type: inline-size;
+  text-align: left;
+}
+
+.apple-portfolio * {
+  box-sizing: border-box;
+}
+
+.apple-portfolio [hidden] {
+  display: none!important;
+}
+
+.apple-portfolio h1,.apple-portfolio h2,.apple-portfolio h3,.apple-portfolio h4,.apple-portfolio p {
+  margin: 0;
+}
+
+.apple-portfolio h1,.apple-portfolio h2,.apple-portfolio h3,.apple-portfolio h4 {
+  font-family: -apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 600;
+}
+
+.apple-portfolio a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.apple-portfolio button,.apple-portfolio summary {
+  font: inherit;
+  color: inherit;
+}
+
+.apple-portfolio button {
+  border: 0;
+  background: none;
+  margin: 0;
+}
+
+.apple-portfolio summary {
+  list-style: none;
+}
+
+.apple-portfolio summary::-webkit-details-marker {
+  display: none;
+}
+
+.apple-portfolio section {
+  scroll-margin-top: 64px;
+}
+
+.apple-portfolio .apt-hero {
+  text-align: center;
+  padding: 70px 22px 74px;
+}
+
+.apple-portfolio h1 {
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: -.005em;
+}
+
+.apple-portfolio .apt-tagline {
+  font-size: clamp(11px,3.3cqi,28px);
+  line-height: 1.14286;
+  letter-spacing: .007em;
+  margin-top: 16px;
+  white-space: nowrap;
+}
+
+.apple-portfolio .apt-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 17px;
+  margin-top: 26px;
+}
+
+.apple-portfolio .apt-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--apt-blue);
+  color: #fff;
+  border: 1px solid var(--apt-blue);
+  border-radius: 980px;
+  padding: 11px 21px;
+  min-height: 44px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  white-space: nowrap;
+  transition: background .16s,border-color .16s,color .16s;
+}
+
+.apple-portfolio .apt-button:hover {
+  background: #0077ed;
+  border-color: #0077ed;
+}
+
+.apple-portfolio .apt-button:active {
+  background: #006edb;
+  border-color: #006edb;
+}
+
+.apple-portfolio .apt-outline {
+  background: transparent;
+  color: var(--apt-link);
+  border-color: var(--apt-link);
+}
+
+.apple-portfolio .apt-outline:hover {
+  background: var(--apt-link);
+  border-color: var(--apt-link);
+  color: #fff;
+}
+
+.apple-portfolio .apt-small {
+  min-height: 36px;
+  padding: 8px 15px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -.016em;
+}
+
+.apple-portfolio .apt-feature {
+  background: #fff;
+  color: var(--apt-ink);
+  padding: 48px 48px 38px;
+  margin-bottom: 12px;
+}
+
+.apple-portfolio .apt-feature-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.apple-portfolio .apt-project-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.apple-portfolio .apt-section-label {
+  color: var(--apt-muted);
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.apple-portfolio .apt-feature h3 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 0;
+}
+
+.apple-portfolio .apt-project-heading .apt-button {
+  margin-bottom: 4px;
+  flex-shrink: 0;
+}
+
+.apple-portfolio .apt-feature-lead {
+  font-size: 21px;
+  line-height: 29px;
+  letter-spacing: .011em;
+  max-width: 720px;
+  margin-top: 22px;
+}
+
+.apple-portfolio .apt-feature-body {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 56px;
+  margin-top: 32px;
+  align-items: start;
+}
+
+.apple-portfolio .apt-bullets {
+  padding-left: 18px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.apple-portfolio .apt-bullets li {
+  padding-left: 4px;
+  margin-bottom: 14px;
+}
+
+.apple-portfolio .apt-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.apple-portfolio .apt-feature .apt-bullets {
+  color: var(--apt-ink);
+}
+
+.apple-portfolio .apt-feature-results {
+  border-left: 1px solid var(--apt-line);
+  padding-left: 32px;
+}
+
+.apple-portfolio .apt-feature-results h4 {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--apt-muted);
+  margin-bottom: 18px;
+}
+
+.apple-portfolio .apt-feature-numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.apple-portfolio .apt-feature-numbers strong {
+  display: block;
+  font-size: 44px;
+  line-height: 48px;
+  font-weight: 600;
+  letter-spacing: -.035em;
+  white-space: nowrap;
+  color: var(--apt-blue);
+}
+
+.apple-portfolio .apt-metric-name {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--apt-muted);
+  margin-bottom: 4px;
+  letter-spacing: 0;
+}
+
+.apple-portfolio .apt-profit-metric {
+  padding-top: 22px;
+}
+
+.apple-portfolio .apt-metric-note {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--apt-muted);
+  letter-spacing: 0;
+  margin-top: 8px;
+}
+
+.apple-portfolio .apt-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding: 0;
+  margin: 28px 0 0;
+  list-style: none;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--apt-muted);
+}
+
+.apple-portfolio .apt-feature .apt-tech {
+  border-top: 1px solid var(--apt-line);
+  padding-top: 22px;
+  margin-top: 28px;
+  color: var(--apt-muted);
+}
+
+.apple-portfolio .apt-project-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  column-gap: 12px;
+  margin: 0 12px 12px;
+}
+
+.apple-portfolio .apt-project {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
+  min-width: 0;
+  background: var(--apt-pale);
+  padding: 42px 36px 36px;
+}
+
+.apple-portfolio .apt-project h3 {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: .004em;
+  max-width: 440px;
+  margin-bottom: 28px;
+}
+
+.apple-portfolio .apt-project-results {
+  border-top: 1px solid var(--apt-line);
+  margin-top: 28px;
+  padding-top: 24px;
+}
+
+.apple-portfolio .apt-project-results h4 {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--apt-muted);
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+}
+
+.apple-portfolio .apt-project-results p {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -.016em;
+}
+
+.apple-portfolio .apt-project-results p+p {
+  margin-top: 12px;
+}
+
+.apple-portfolio .apt-project-results strong {
+  color: var(--apt-blue);
+  font-weight: 600;
+}
+
+.apple-portfolio .apt-project-metrics {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 14px;
+}
+
+.apple-portfolio .apt-project-metrics p+p {
+  margin-top: 0;
+}
+
+.apple-portfolio .apt-project-metrics span {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--apt-muted);
+}
+
+.apple-portfolio .apt-project-metrics .apt-metric-note {
+  overflow-wrap: anywhere;
+}
+
+.apple-portfolio .apt-project-metrics strong {
+  display: block;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -.02em;
+  white-space: nowrap;
+  margin-top: 4px;
+}
+
+.apple-portfolio .apt-project .apt-tech {
+  margin-top: 26px;
+}
+
+.apple-portfolio .apt-repo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  justify-self: start;
+  color: var(--apt-link);
+  font-size: 17px;
+  line-height: 25px;
+  margin-top: 24px;
+  padding: 3px 0;
+}
+
+.apple-portfolio .apt-repo:hover {
+  text-decoration: underline;
+}
+
+.apple-portfolio .apt-section {
+  padding: 66px 48px;
+}
+
+.apple-portfolio .apt-inner {
+  max-width: 1080px;
+  margin: auto;
+}
+
+.apple-portfolio .apt-section h2 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 0;
+  margin-bottom: 36px;
+}
+
+.apple-portfolio .apt-about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 72px;
+}
+
+.apple-portfolio .apt-period {
+  color: var(--apt-muted);
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.apple-portfolio .apt-education h3 {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: .009em;
+  margin-bottom: 12px;
+}
+
+.apple-portfolio .apt-program {
+  font-size: 17px;
+  line-height: 25px;
+  margin-bottom: 16px;
+}
+
+.apple-portfolio .apt-education-detail {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--apt-muted);
+  margin-top: 5px;
+}
+
+.apple-portfolio .apt-education article+article {
+  margin-top: 30px;
+  padding-top: 28px;
+  border-top: 1px solid var(--apt-line);
+}
+
+.apple-portfolio .apt-about-side h3 {
+  font-size: 21px;
+  line-height: 25px;
+  letter-spacing: .011em;
+  margin-bottom: 16px;
+}
+
+.apple-portfolio .apt-skills ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.apple-portfolio .apt-skills li {
+  margin-bottom: 10px;
+}
+
+.apple-portfolio .apt-languages {
+  margin-top: 30px;
+  border-top: 1px solid var(--apt-line);
+  padding-top: 24px;
+}
+
+.apple-portfolio .apt-languages p {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: .009em;
+}
+
+.apple-portfolio .apt-languages strong {
+  color: var(--apt-blue);
+  font-weight: 600;
+}
+
+.apple-portfolio .apt-stack {
+  background: var(--apt-pale);
+  margin: 0 12px;
+}
+
+.apple-portfolio .apt-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 30px 40px;
+}
+
+.apple-portfolio .apt-stack-grid>div {
+  border-top: 1px solid var(--apt-line);
+  padding-top: 18px;
+}
+
+.apple-portfolio .apt-stack h3 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: -.016em;
+  color: var(--apt-muted);
+  margin-bottom: 12px;
+}
+
+.apple-portfolio .apt-stack ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.apple-portfolio .apt-stack li {
+  font-size: 21px;
+  line-height: 29px;
+  font-weight: 600;
+  letter-spacing: .011em;
+}
+
+.apple-portfolio .apt-contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr .8fr;
+  gap: 24px;
+}
+
+.apple-portfolio .apt-contact-grid a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+  border-top: 1px solid var(--apt-line);
+  padding: 18px 0 18px;
+}
+
+.apple-portfolio .apt-contact-label {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0;
+  color: var(--apt-muted);
+}
+
+.apple-portfolio .apt-contact-value {
+  font-size: 17px;
+  line-height: 25px;
+  color: var(--apt-link);
+  white-space: nowrap;
+}
+
+.apple-portfolio .apt-contact-grid a:hover .apt-contact-value {
+  text-decoration: underline;
+}
+
+.apple-portfolio .apt-contact-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  color: var(--apt-link);
+}
+
+.apple-portfolio .apt-contact-row svg,.apple-portfolio .apt-repo svg,.apple-portfolio .apt-button svg {
+  display: block;
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+}
+
+.apple-portfolio a:focus-visible {
+  outline: 3px solid var(--apt-blue);
+  outline-offset: 4px;
+}
+
+@container(max-width:1068px) {
+  .apple-portfolio .apt-feature {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .apple-portfolio .apt-feature-body {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 32px;
+  }
+  .apple-portfolio .apt-feature-results {
+    padding-left: 24px;
+  }
+  .apple-portfolio .apt-feature-numbers {
+    gap: 18px;
+  }
+  .apple-portfolio .apt-feature-numbers strong {
+    font-size: 38px;
+    line-height: 44px;
+  }
+  .apple-portfolio .apt-project {
+    padding: 36px 28px 30px;
+  }
+  .apple-portfolio .apt-project h3 {
+    max-width: 340px;
+  }
+  .apple-portfolio .apt-about-grid {
+    gap: 48px;
+  }
+  .apple-portfolio .apt-contact-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 8px 32px;
+  }
+}
+
+@container(max-width:833px) {
+  .apple-portfolio .apt-project-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .apple-portfolio .apt-feature-body {
+    grid-template-columns: 1fr;
+  }
+  .apple-portfolio .apt-feature-results {
+    border-left: 0;
+    border-top: 1px solid var(--apt-line);
+    padding: 24px 0 0;
+  }
+  .apple-portfolio .apt-feature-numbers {
+    max-width: 480px;
+    gap: 32px;
+  }
+  .apple-portfolio .apt-feature-numbers strong {
+    font-size: 44px;
+    line-height: 48px;
+  }
+  .apple-portfolio .apt-stack-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@container(max-width:734px) {
+  .apple-portfolio .apt-hero {
+    padding: 46px 14px 48px;
+  }
+  .apple-portfolio h1 {
+    font-size: clamp(28px,7.7cqi,40px);
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+  .apple-portfolio .apt-tagline {
+    margin-top: 14px;
+  }
+  .apple-portfolio .apt-actions {
+    margin-top: 22px;
+  }
+  .apple-portfolio .apt-button {
+    min-height: 44px;
+    padding: 11px 18px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .apple-portfolio .apt-feature {
+    padding: 32px 24px 30px;
+  }
+  .apple-portfolio .apt-section-label {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 12px;
+  }
+  .apple-portfolio .apt-feature h3 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .apple-portfolio .apt-feature-lead {
+    font-size: 19px;
+    line-height: 27px;
+    letter-spacing: .005em;
+    margin-top: 22px;
+  }
+  .apple-portfolio .apt-feature-body {
+    margin-top: 26px;
+    gap: 26px;
+  }
+  .apple-portfolio .apt-bullets {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .apple-portfolio .apt-feature-numbers {
+    gap: 20px;
+  }
+  .apple-portfolio .apt-feature-numbers strong {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .apple-portfolio .apt-tech {
+    font-size: 12px;
+    line-height: 18px;
+    gap: 7px 16px;
+  }
+  .apple-portfolio .apt-project-grid {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+    margin: 0 0 12px;
+  }
+  .apple-portfolio .apt-project {
+    display: flex;
+    flex-direction: column;
+    grid-row: auto;
+    padding: 32px 24px 30px;
+  }
+  .apple-portfolio .apt-project h3 {
+    font-size: 28px;
+    line-height: 32px;
+    max-width: none;
+    margin-bottom: 24px;
+  }
+  .apple-portfolio .apt-project-results {
+    margin-top: 26px;
+    padding-top: 22px;
+  }
+  .apple-portfolio .apt-project-metrics {
+    gap: 8px;
+  }
+  .apple-portfolio .apt-project-metrics strong {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .apple-portfolio .apt-repo {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+  }
+  .apple-portfolio .apt-section {
+    padding: 46px 24px;
+  }
+  .apple-portfolio .apt-section h2 {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 28px;
+  }
+  .apple-portfolio .apt-about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .apple-portfolio .apt-education h3 {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .apple-portfolio .apt-about-side {
+    border-top: 1px solid var(--apt-line);
+    padding-top: 26px;
+  }
+  .apple-portfolio .apt-languages p {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .apple-portfolio .apt-stack {
+    margin: 0;
+  }
+  .apple-portfolio .apt-stack-grid {
+    gap: 28px 24px;
+  }
+  .apple-portfolio .apt-stack h3 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .apple-portfolio .apt-stack ul {
+    gap: 4px 12px;
+  }
+  .apple-portfolio .apt-stack li {
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: -.022em;
+  }
+  .apple-portfolio .apt-contact-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 22px;
+  }
+  .apple-portfolio .apt-contact-grid a:first-child {
+    grid-column: 1/-1;
+  }
+  .apple-portfolio .apt-contact-grid a:last-child {
+    grid-column: 1/-1;
+  }
+  .apple-portfolio .apt-contact-grid a {
+    padding-bottom: 16px;
+  }
+}
+
+@container (min-width:735px) and (max-width:800px) {
+  .apple-portfolio .apt-project-metrics .apt-metric-name {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+}
+
+@container(max-width:359px) {
+  .apple-portfolio .apt-project-metrics .apt-metric-name {
+    font-size: 10.5px;
+    white-space: nowrap;
+  }
+  .apple-portfolio .apt-contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .apple-portfolio .apt-feature-numbers {
+    gap: 16px;
+  }
+  .apple-portfolio .apt-feature-numbers strong {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .apple-portfolio .apt-stack-grid {
+    grid-template-columns: 1fr;
+  }
+  .apple-portfolio .apt-stack h3 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .apple-portfolio .apt-stack li {
+    font-size: 21px;
+    line-height: 29px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .apple-portfolio * {
+    transition: none!important;
+    scroll-behavior: auto!important;
+  }
+}
