@@ -247,6 +247,7 @@ body::before {
 }
 
 .hero__inner {
+  container-type: inline-size;
   border: var(--border);
   box-shadow: var(--shadow);
   background: var(--surface);
@@ -263,8 +264,8 @@ body::before {
 
 .hero__lead {
   margin: 0 0 1.75rem;
-  max-width: 40ch;
-  font-size: 1.05rem;
+  font-size: min(1.05rem, 3.5cqi);
+  white-space: nowrap;
 }
 
 .hero__actions {
