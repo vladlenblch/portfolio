@@ -109,7 +109,7 @@ export const projects = [
       },
     ],
     url: 'https://github.com/vladlenblch/semantic_duplicate_detector',
-    tags: ['Python', 'PyTorch', 'Hugging Face Transformers', 'scikit-learn'],
+    tags: ['Python', 'PyTorch', 'Hugging Face', 'scikit-learn'],
   },
   {
     title: 'Decision Tree Classifier',
