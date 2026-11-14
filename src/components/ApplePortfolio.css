@@ -257,6 +257,33 @@
   display: none!important;
 }
 
+.apple-portfolio [data-reveal-variant='card'] {
+  --apt-reveal-distance: 40px;
+  --apt-reveal-scale: .985;
+}
+
+.apple-portfolio [data-reveal-state='pending'] {
+  opacity: 0;
+  transform: translate3d(0, var(--apt-reveal-distance, 30px), 0) scale(var(--apt-reveal-scale, 1));
+}
+
+.apple-portfolio [data-reveal-state='revealing'] {
+  will-change: opacity, transform;
+  animation:
+    apt-reveal-opacity .9s ease var(--apt-reveal-delay, 0ms) both,
+    apt-reveal-rise .7s cubic-bezier(.22, 1, .36, 1) var(--apt-reveal-delay, 0ms) both;
+}
+
+@keyframes apt-reveal-opacity {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes apt-reveal-rise {
+  from { transform: translate3d(0, var(--apt-reveal-distance, 30px), 0) scale(var(--apt-reveal-scale, 1)); }
+  to { transform: none; }
+}
+
 .apple-portfolio h1,.apple-portfolio h2,.apple-portfolio h3,.apple-portfolio h4,.apple-portfolio p {
   margin: 0;
 }
@@ -1057,5 +1084,13 @@
   .apple-portfolio * {
     transition: none!important;
     scroll-behavior: auto!important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce), print {
+  .apple-portfolio [data-reveal] {
+    opacity: 1!important;
+    transform: none!important;
+    animation: none!important;
   }
 }
