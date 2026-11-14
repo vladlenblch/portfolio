@@ -45,7 +45,7 @@ export const spokenLanguages = [
 export const stackGroups = [
   {
     title: 'Языки программирования',
-    items: ['Python', 'C++'],
+    items: ['Python', 'C++', 'Java'],
   },
   {
     title: 'ML/DL',
@@ -79,9 +79,9 @@ export const projects = [
   {
     title: 'Credit Approval ML System',
     bullets: [
-      'Разработал ML-сервис на FastAPI, который оценивает вероятность дефолта и принимает решение по заявке',
-      'Построил пайплайн без утечки данных со стратифицированным разбиением, заполнением пропусков и конструированием признаков',
-      'Подобрал гиперпараметры и веса ансамбля CatBoost, LightGBM и XGBoost через байесовскую оптимизацию в Optuna. Проверил качество по OOF-предсказаниям на трёх фолдах',
+      'Разработал ML-сервис на FastAPI, который оценивает вероятность дефолта по заявке',
+      'Построил пайплайн без утечки данных со стратифицированным разбиением и заполнением пропусков',
+      'Подобрал гиперпараметры CatBoost, LightGBM и XGBoost через байесовскую оптимизацию в Optuna',
       'Подобрал порог принятия решения по функции прибыли',
       {
         text: 'Результаты на тестовой выборке',
@@ -92,7 +92,7 @@ export const projects = [
       },
     ],
     url: 'https://github.com/vladlenblch/credit_approval_system',
-    tags: ['Python', 'FastAPI', 'Pandas', 'scikit-learn', 'Optuna', 'CatBoost', 'LightGBM', 'XGBoost'],
+    tags: ['Python', 'FastAPI', 'scikit-learn', 'Optuna', 'CatBoost', 'LightGBM', 'XGBoost'],
   },
   {
     title: 'Semantic Duplicate Detector',
@@ -109,14 +109,14 @@ export const projects = [
       },
     ],
     url: 'https://github.com/vladlenblch/semantic_duplicate_detector',
-    tags: ['Python', 'PyTorch', 'Hugging Face Transformers', 'scikit-learn', 'Pandas'],
+    tags: ['Python', 'PyTorch', 'Hugging Face Transformers', 'scikit-learn'],
   },
   {
     title: 'Decision Tree Classifier',
     bullets: [
       'Реализовал дерево бинарной классификации с нуля на C++',
-      'Покрыл проект тестами на GoogleTest, измерил производительность через Google Benchmark и настроил автоматический запуск тестов в GitHub Actions',
-      'Сравнил критерии gini и entropy. С entropy Accuracy выросла с 0,971 до 0,985, а Precision — с 0,952 до 0,992',
+      'Настроил автоматический запуск тестов на GoogleTest и замеры производительности через Google Benchmark в GitHub Actions',
+      'Сравнил критерии gini и entropy. С entropy Accuracy выросла с 0,971 до 0,985, Precision — с 0,952 до 0,992',
       {
         text: 'Результаты на тестовой выборке для entropy',
         sub: [
