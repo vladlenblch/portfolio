@@ -69,8 +69,6 @@ export const stackGroups = [
   },
 ] as const
 
-export const siteStackFooterText = ['Vite', 'React', 'TypeScript', 'CSS'].join(' · ')
-
 export type ProjectBullet =
   | string
   | { readonly text: string; readonly sub: readonly string[] }

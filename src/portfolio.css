@@ -4,8 +4,6 @@
   --surface: #ffffff;
   --accent: #d92b2b;
   --lime: #c8f542;
-  --footer-bg: #0c0c0c;
-  --footer-fg: #f4f0e8;
   --html-overscroll: #0c0c0c;
   --border: 3px solid var(--ink);
   --shadow: 6px 6px 0 var(--ink);
@@ -714,27 +712,4 @@ button.contact-tile {
 .contact-tile__value {
   font-weight: 600;
   word-break: break-word;
-}
-
-.site-footer {
-  flex-shrink: 0;
-  border-top: var(--border);
-  padding: 1.5rem var(--space);
-  text-align: center;
-  font-size: 0.85rem;
-  background: var(--footer-bg);
-  color: var(--footer-fg);
-}
-
-.site-footer p {
-  margin: 0;
-}
-
-.site-footer__stack {
-  max-width: 64ch;
-  margin: 0 auto;
-  font-size: 0.78rem;
-  line-height: 1.65;
-  opacity: 0.92;
-  text-wrap: balance;
 }
