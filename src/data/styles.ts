@@ -10,8 +10,8 @@ export const styleStorageKey = 'portfolio-style'
 export function getInitialStyle(): PortfolioStyle {
   try {
     const saved = window.localStorage.getItem(styleStorageKey)
-    return portfolioStyles.find((style) => style.id === saved)?.id ?? 'brutalism'
+    return portfolioStyles.find((style) => style.id === saved)?.id ?? 'apple'
   } catch {
-    return 'brutalism'
+    return 'apple'
   }
 }
