@@ -1,6 +1,6 @@
 export const portfolioStyles = [
-  { id: 'brutalism', label: 'Брутализм' },
   { id: 'apple', label: 'Минимализм' },
+  { id: 'brutalism', label: 'Брутализм' },
 ] as const
 
 export type PortfolioStyle = (typeof portfolioStyles)[number]['id']
