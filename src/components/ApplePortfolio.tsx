@@ -1,6 +1,8 @@
 import { education, person, projects, softSkills, spokenLanguages, stackGroups, type ProjectBullet } from '../data/content'
 import { ArrowUpRight } from './Icons'
 import { useScrollReveal } from './useScrollReveal'
+import { ResumeDownload } from './ResumeDownload'
+import { useResumeDrag } from './useResumeDrag'
 
 function PrimaryMetric({ text }: { text: string }) {
   const match = /^(.*?=\s*)?(\d+(?:[ \u00a0\u202f]\d{3})*(?:,\d+)?)(.*)$/.exec(text)
@@ -44,13 +46,13 @@ function Technologies({ tags }: { tags: readonly string[] }) {
 
 export function ApplePortfolio() {
   const portfolioRef = useScrollReveal()
+  const showResumeDrag = useResumeDrag()
   const [featured, ...otherProjects] = projects
   const [intro, ...featuredDetails] = featured.bullets
   const contacts = [
     { label: 'Email', value: person.email, href: `mailto:${person.email}` },
     { label: 'Telegram', value: `@${new URL(person.telegram).pathname.slice(1)}`, href: person.telegram },
     { label: 'GitHub', value: new URL(person.github).pathname.slice(1), href: person.github },
-    { label: 'Resume', value: 'Скачать PDF', href: person.resumePath, download: 'resume.pdf' },
   ]
 
   return <div className="apple-portfolio" ref={portfolioRef}>
@@ -111,13 +113,18 @@ export function ApplePortfolio() {
         key={contact.label}
         data-reveal={`contact:${contact.label}`}
         href={contact.href}
-        download={contact.download}
         target={contact.href.startsWith('https://') ? '_blank' : undefined}
         rel={contact.href.startsWith('https://') ? 'noreferrer' : undefined}
       >
         <span className="apt-contact-label">{contact.label}</span>
         <span className="apt-contact-row"><span className="apt-contact-value">{contact.value}</span><ArrowUpRight /></span>
-      </a>)}</div>
+      </a>)}
+        {!showResumeDrag && <a href={person.resumePath} download="resume.pdf" data-reveal="contact:Resume">
+          <span className="apt-contact-label">Resume</span>
+          <span className="apt-contact-row"><span className="apt-contact-value">Скачать PDF</span><ArrowUpRight /></span>
+        </a>}
+      </div>
+      {showResumeDrag && <ResumeDownload />}
     </div></section>
   </div>
 }

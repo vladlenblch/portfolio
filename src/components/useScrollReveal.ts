@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef } from 'react'
 
-// Keep reveals across style changes, but start fresh after a page reload.
+// Play each reveal once per page load.
 const seenThisPage = new Set<string>()
 
 function remember(element: HTMLElement) {

@@ -196,109 +196,9 @@ body::before {
   color: var(--paper);
 }
 
-.site-nav__link:focus-visible,
-.style-picker__toggle:focus-visible,
-.style-picker__option:focus-visible {
+.site-nav__link:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 2px;
-}
-
-.style-picker {
-  position: relative;
-}
-
-.style-picker__toggle,
-.style-picker__option {
-  font: inherit;
-  font-weight: 600;
-  color: var(--ink);
-  cursor: pointer;
-}
-
-.style-picker__toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.4rem 0.75rem;
-  background: var(--lime);
-  border: var(--border);
-  box-shadow: var(--shadow-sm);
-}
-
-@media (hover: hover) {
-  .style-picker__toggle:hover {
-    box-shadow: var(--shadow);
-  }
-}
-
-.style-picker__toggle:active {
-  box-shadow: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .style-picker__toggle {
-    transition: transform 0.12s ease, box-shadow 0.12s ease;
-  }
-
-  @media (hover: hover) {
-    .style-picker__toggle:hover {
-      transform: translate(-2px, -2px);
-    }
-  }
-
-  .style-picker__toggle:active {
-    transform: translate(2px, 2px);
-  }
-}
-
-.style-picker__chevron {
-  display: block;
-  flex: 0 0 auto;
-  width: 1em;
-  height: 1em;
-}
-
-.style-picker__toggle[aria-expanded='true'] .style-picker__chevron {
-  transform: rotate(180deg);
-}
-
-.style-picker__current {
-  display: none;
-}
-
-.style-picker__list {
-  position: absolute;
-  inset: calc(100% + 0.7rem) 0 auto auto;
-  width: 13rem;
-  margin: 0;
-  padding: 0.45rem;
-  list-style: none;
-  background: var(--surface);
-  border: var(--border);
-  box-shadow: var(--shadow-sm);
-}
-
-.style-picker__option {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.65rem;
-  width: 100%;
-  min-height: 44px;
-  padding: 0.4rem 0.65rem;
-  text-align: left;
-  background: var(--surface);
-  border: 2px solid transparent;
-}
-
-.style-picker__option[aria-pressed='true'] {
-  background: var(--paper);
-  border-color: var(--ink);
-}
-
-.style-picker__option:hover {
-  background: var(--ink);
-  color: var(--paper);
 }
 
 @media (max-width: 768px) {
@@ -343,15 +243,6 @@ body::before {
     background: var(--surface);
   }
 
-  .style-picker__toggle {
-    min-height: 44px;
-  }
-
-  .style-picker__list {
-    position: static;
-    width: min(100%, 13rem);
-    margin-top: 0.7rem;
-  }
 }
 
 .hero {

@@ -63,76 +63,6 @@
   opacity: 1;
 }
 
-:root[data-style='apple'] .style-picker__toggle {
-  min-height: 32px;
-  gap: 8px;
-  padding: 8px 10px;
-  margin-right: -10px;
-  border: 0;
-  border-radius: 6px;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 400;
-  background: transparent;
-  box-shadow: none;
-  transform: none;
-  transition: background .16s;
-  white-space: nowrap;
-}
-
-:root[data-style='apple'] .style-picker__toggle:hover,
-:root[data-style='apple'] .style-picker__toggle[aria-expanded='true'] {
-  background: #e8e8ed;
-  box-shadow: none;
-  transform: none;
-}
-
-:root[data-style='apple'] .style-picker__toggle:active {
-  background: #dcdce2;
-  transform: none;
-}
-
-:root[data-style='apple'] .style-picker__current {
-  display: inline;
-}
-
-:root[data-style='apple'] .style-picker__chevron {
-  width: 12px;
-  height: 12px;
-}
-
-:root[data-style='apple'] .style-picker__list {
-  inset: calc(100% + 6px) -10px auto auto;
-  width: 210px;
-  padding: 8px;
-  border: 1px solid #e8e8ed;
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 12px 35px #0000001a;
-}
-
-:root[data-style='apple'] .style-picker__option {
-  border: 0;
-  border-radius: 8px;
-  padding: 10px;
-  min-height: 40px;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #1d1d1f;
-  background: #fff;
-}
-
-:root[data-style='apple'] .style-picker__option[aria-pressed='true'] {
-  background: #eaf3ff;
-  color: #0066cc;
-}
-
-:root[data-style='apple'] .style-picker__option:hover {
-  background: #f5f5f7;
-  color: #0066cc;
-}
-
 :root[data-style='apple'] .nav-toggle {
   margin-left: auto;
   border: 0;
@@ -198,35 +128,6 @@
     font-weight: 600;
     padding: 7px 0;
     opacity: 1;
-  }
-  :root[data-style='apple'] .style-picker {
-    margin-top: 24px;
-    border-top: 1px solid #d2d2d7;
-    padding-top: 12px;
-  }
-  :root[data-style='apple'] .style-picker__toggle {
-    min-height: 44px;
-    padding: 10px 0;
-    font-size: 17px;
-    line-height: 24px;
-    gap: 10px;
-    margin: 0;
-  }
-  :root[data-style='apple'] .style-picker__list {
-    position: static;
-    width: 100%;
-    max-width: 340px;
-    margin-top: 8px;
-    padding: 4px;
-    border: 0;
-    box-shadow: none;
-    background: transparent;
-  }
-  :root[data-style='apple'] .style-picker__option {
-    min-height: 44px;
-    background: transparent;
-    font-size: 17px;
-    line-height: 24px;
   }
 }
 
@@ -782,8 +683,12 @@
 
 .apple-portfolio .apt-contact-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr .8fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+}
+
+.apple-portfolio .apt-contact-grid:where(:has(a[download])) {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .apple-portfolio .apt-contact-grid a {
@@ -862,7 +767,7 @@
   .apple-portfolio .apt-about-grid {
     gap: 48px;
   }
-  .apple-portfolio .apt-contact-grid {
+  .apple-portfolio .apt-contact-grid:where(:has(a[download])) {
     grid-template-columns: repeat(2,minmax(0,1fr));
     gap: 8px 32px;
   }
@@ -1034,12 +939,6 @@
     grid-template-columns: 1fr 1fr;
     gap: 8px 22px;
   }
-  .apple-portfolio .apt-contact-grid a:first-child {
-    grid-column: 1/-1;
-  }
-  .apple-portfolio .apt-contact-grid a:last-child {
-    grid-column: 1/-1;
-  }
   .apple-portfolio .apt-contact-grid a {
     padding-bottom: 16px;
   }
@@ -1052,13 +951,16 @@
   }
 }
 
+@container(max-width:520px) {
+  .apple-portfolio .apt-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @container(max-width:359px) {
   .apple-portfolio .apt-project-metrics .apt-metric-name {
     font-size: 10.5px;
     white-space: nowrap;
-  }
-  .apple-portfolio .apt-contact-grid {
-    grid-template-columns: 1fr;
   }
   .apple-portfolio .apt-feature-numbers {
     gap: 16px;

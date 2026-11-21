@@ -1,0 +1,12 @@
+WhiteSur icon theme — vinceliuice and contributors
+https://github.com/vinceliuice/WhiteSur-icon-theme
+
+These icons are distributed under the GNU General Public License, version 3.
+folder-back.svg and folder-front.svg adapt the original folder into two layers
+for animation. The download emblem stays on the front flap. The license text
+is in COPYING.
+
+Upstream sources:
+https://github.com/vinceliuice/WhiteSur-icon-theme/blob/73d8040da51a9ed74e47c7366e7e9ff437601a5c/src/places/scalable/folder-download.svg
+https://github.com/vinceliuice/WhiteSur-icon-theme/blob/73d8040da51a9ed74e47c7366e7e9ff437601a5c/src/places/scalable/folder-open.svg
+https://github.com/vinceliuice/WhiteSur-icon-theme/blob/73d8040da51a9ed74e47c7366e7e9ff437601a5c/COPYING
