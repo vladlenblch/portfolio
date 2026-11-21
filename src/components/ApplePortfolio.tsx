@@ -124,7 +124,9 @@ export function ApplePortfolio() {
           <span className="apt-contact-row"><span className="apt-contact-value">Скачать PDF</span><ArrowUpRight /></span>
         </a>}
       </div>
-      {showResumeDrag && <ResumeDownload />}
+      <div data-reveal="contact:resume-download" hidden={!showResumeDrag}>
+        {showResumeDrag && <ResumeDownload />}
+      </div>
     </div></section>
   </div>
 }

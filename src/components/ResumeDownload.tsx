@@ -239,9 +239,9 @@ export function ResumeDownload() {
         <span className="resume-download__name">Резюме.pdf</span>
       </button>
       <div className="resume-download__route" aria-hidden="true">
-        <svg viewBox="0 0 180 36" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M6 18h134" strokeDasharray="6 10" />
-          <path d="M150 18h21m-9-9 9 9-9 9" />
+        <svg viewBox="0 0 180 60" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M6 30 Q90 -12 174 30" pathLength="166" strokeDasharray="6 10" />
+          <path d="M170 18 L174 30 L162 34" />
         </svg>
       </div>
       <div className="resume-download__folder">
